@@ -1,0 +1,69 @@
+{{#if priceList}}
+{{#each priceList}}
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <a href="/may-anh/{{this.masp}}" class="link-img"><img src="/images/products/{{this.tenhinh}}" alt=""></a>
+                        <div class="down-content">
+                          <a href="/may-anh/{{this.masp}}" title="{{this.tensp}}"><h4>{{this.tensp}}</h4></a>
+                          {{#if this.giagiam}}
+                            <div style="min-height: 50px;">
+                              <h6>{{formatCurrency this.giagiam}}</h6>
+                              <span class="giaban">{{formatCurrency this.giaban}}</span> 
+                            </div>
+                          {{else}}
+                            <div style="min-height: 50px;">
+                              <h6>{{formatCurrency this.giaban}}</h6>
+                            </div>
+                          {{/if}}
+                          <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                          </ul>
+                          <span>Reviews (24)</span>
+                          {{#if this.soluong}}
+                          <a onclick="AddToCart('{{this.masp}}')" class="btn btn-outline-success btn-muahang">Mua hàng</a>
+                          {{else}}
+                          <div style="margin-top: 18px;color: #f33f3f;font-weight: 500;font-size: 20px;">HÀNG TẠM HẾT</div>
+                          {{/if}}
+                        </div>
+                      </div>
+                    </div>
+{{/each}}
+{{else}}
+{{#each lastedList}}
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <a href="/may-anh/{{this.masp}}" class="link-img"><img src="/images/products/{{this.tenhinh}}" alt=""></a>
+                        <div class="down-content">
+                          <a href="/may-anh/{{this.masp}}" title="{{this.tensp}}"><h4>{{this.tensp}}</h4></a>
+                          {{#if this.giagiam}}
+                            <div style="min-height: 50px;">
+                              <h6>{{formatCurrency this.giagiam}}</h6>
+                              <span class="giaban">{{formatCurrency this.giaban}}</span> 
+                            </div>
+                          {{else}}
+                            <div style="min-height: 50px;">
+                              <h6>{{formatCurrency this.giaban}}</h6>
+                            </div>
+                          {{/if}}
+                          <ul class="stars">
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                            <li><i class="fa fa-star"></i></li>
+                          </ul>
+                          <span>Reviews (24)</span>
+                          {{#if this.soluong}}
+                          <a onclick="AddToCart('{{this.masp}}')" class="btn btn-outline-success btn-muahang">Mua hàng</a>
+                          {{else}}
+                          <div style="margin-top: 18px;color: #f33f3f;font-weight: 500;font-size: 20px;">HÀNG TẠM HẾT</div>
+                          {{/if}}
+                        </div>
+                      </div>
+                    </div>
+{{/each}}
+{{/if}}
